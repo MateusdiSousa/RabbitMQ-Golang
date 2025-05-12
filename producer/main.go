@@ -36,7 +36,6 @@ func main() {
 	}
 
 	mux := http.NewServeMux()
-
 	mux.HandleFunc("/send", func(w http.ResponseWriter, r *http.Request) {
 		if r.Method == http.MethodPost {
 			rbody, err := ReadRequestBody(r)
